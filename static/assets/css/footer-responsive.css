@@ -1,0 +1,54 @@
+/* Add this after css/footer.css.
+   Purpose: keep the SEPTANEURON wordmark on ONE line at every viewport
+   width. Font-size alone can't guarantee that for an 11-letter bold word,
+   so this file keeps the row layout (logo + text side by side, never
+   stacked, never wrapped) and footer.js applies a JS-computed transform:
+   scale() to the text so it always fits the available width exactly.
+*/
+
+@font-face {
+    font-family: 'Ethnocentric';
+    src: url('../fonts/Ethnocentric-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+.sn-footer__wordmark {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* never stack, never wrap */
+    justify-content: flex-start;
+    gap: clamp(12px, 3vw, 32px);
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    /* safety net; JS scaling keeps this from ever triggering */
+}
+
+.sn-footer__mark {
+    flex: 0 0 auto;
+    width: clamp(40px, 9vw, 150px);
+    height: auto;
+    display: block;
+}
+
+.sn-footer__text {
+    display: inline-block;
+    flex: 0 0 auto;
+    min-width: 0;
+    white-space: nowrap;
+    /* hard rule: this never wraps */
+    overflow: visible;
+    font-family: 'Ethnocentric', 'Söhne', 'Inter', sans-serif;
+    transform-origin: left center;
+    /* footer.js scales from here to fit */
+    will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sn-footer__text {
+        animation: none;
+    }
+}

@@ -1,0 +1,223 @@
+{% extends "base.html" %} {% block title %}Septaneuron{% endblock %} {% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/homepage-sections.css') }}">{% endblock %} {% block content %}
+
+<div class="sn-ambient" aria-hidden="true">
+    <div class="sn-ambient__orb sn-ambient__orb--one"></div>
+    <div class="sn-ambient__orb sn-ambient__orb--two"></div>
+    <div class="sn-ambient__grid"></div>
+    <div class="sn-ambient__noise"></div>
+</div>
+
+<!-- ===== Navbar ===== -->
+
+
+<!-- ===== Hero ===== -->
+
+<div class="hero" id="home">
+    <canvas class="thread-canvas" id="threadCanvas"></canvas>
+    <div class="hero-scrim"></div>
+
+    <div class="hero-content">
+        <div class="hero-main">
+            <div class="badge">
+                <span class="badge-tag">NEW</span> AI systems, shipped by a seven-person team
+            </div>
+
+            <h1>We build the software your team hasn't gotten around to yet.</h1>
+
+            <p class="hero-sub">
+                Septaneuron is a software house for founders who need AI products, automation, and full-stack builds done by people who actually ship — not just a proposal deck.
+            </p>
+
+            <div class="hero-actions">
+                <button class="btn-primary">Start a project</button>
+                <button class="btn-secondary">See our work</button>
+            </div>
+        </div>
+
+        <div class="hero-footer">
+            Seven builders. One studio.
+        </div>
+    </div>
+</div>
+
+<!-- Place this block immediately after the existing hero and before the footer. -->
+
+<main class="sn-home-sections">
+    <section class="sn-trust sn-section" aria-label="Trust and proof points">
+        <p class="sn-eyebrow">Trusted by teams who needed it done right the first time</p>
+        <div class="sn-trust__items">
+            <span><strong>50+</strong> projects shipped</span>
+            <span><strong>7</strong> senior engineers</span>
+            <span><strong>0</strong> missed deadlines</span>
+            <span><strong>1</strong> accountable team</span>
+        </div>
+    </section>
+
+    <section class="sn-section sn-build" id="services">
+        <div class="sn-section__heading sn-reveal">
+            <div>
+                <p class="sn-kicker">Capabilities</p>
+                <h2>Software, built <em>end to end.</em></h2>
+            </div>
+            <p class="sn-section__intro">From the first technical decision to the last production deploy, we keep the build in one senior team.</p>
+        </div>
+        <div class="sn-capability-grid">
+            <article class="sn-capability-card sn-reveal"><span class="sn-card-index">01</span>
+                <h3>AI products &amp; agents</h3>
+                <p>LLM-powered products, copilots, retrieval systems, and agent workflows that connect to the tools your team already uses.</p><span class="sn-card-arrow">↗</span></article>
+            <article class="sn-capability-card sn-reveal"><span class="sn-card-index">02</span>
+                <h3>Workflow automation</h3>
+                <p>Reliable automations that move data, trigger actions, and remove repetitive work across your operations.</p><span class="sn-card-arrow">↗</span></article>
+            <article class="sn-capability-card sn-reveal"><span class="sn-card-index">03</span>
+                <h3>Full-stack web apps</h3>
+                <p>Production-ready interfaces, APIs, authentication, payments, and the infrastructure underneath them.</p><span class="sn-card-arrow">↗</span></article>
+            <article class="sn-capability-card sn-reveal"><span class="sn-card-index">04</span>
+                <h3>Internal tools &amp; dashboards</h3>
+                <p>Focused software for the teams behind the scenes: admin panels, reporting, ops consoles, and data views.</p><span class="sn-card-arrow">↗</span></article>
+            <article class="sn-capability-card sn-reveal"><span class="sn-card-index">05</span>
+                <h3>API &amp; backend systems</h3>
+                <p>Well-shaped services, integrations, queues, and data models designed to stay understandable as you grow.</p><span class="sn-card-arrow">↗</span></article>
+            <article class="sn-capability-card sn-reveal"><span class="sn-card-index">06</span>
+                <h3>MVP builds for startups</h3>
+                <p>A narrow, usable first version that answers the important product questions without building a disposable prototype.</p><span class="sn-card-arrow">↗</span></article>
+        </div>
+    </section>
+
+    <section class="sn-section sn-work" id="work">
+        <div class="sn-section__heading sn-reveal">
+            <div>
+                <p class="sn-kicker">Selected work</p>
+                <h2>A few things we’ve <em>shipped.</em></h2>
+            </div>
+            <p class="sn-section__intro">A small studio is at its best when the work speaks plainly. Here are two representative builds.</p>
+        </div>
+        <div class="sn-work-grid">
+            <article class="sn-work-card sn-work-card--feature sn-reveal">
+                <div class="sn-work-card__visual sn-visual--signal"><span class="sn-visual__label">AI OPERATIONS / 2025</span><span class="sn-visual__pulse"></span><span class="sn-visual__metric">−42%<small>time to resolution</small></span></div>
+                <div class="sn-work-card__body">
+                    <p class="sn-card-meta">SignalDesk · AI operations platform</p>
+                    <h3>Turn a noisy support queue into a system that knows what to do next.</h3>
+                    <p>We combined retrieval, agent actions, and a human review layer into one working operations console.</p>
+                    <div class="sn-tags"><span>React</span><span>Python</span><span>LLM APIs</span></div>
+                </div>
+            </article>
+            <article class="sn-work-card sn-reveal">
+                <div class="sn-work-card__visual sn-visual--atlas"><span class="sn-visual__label">INTERNAL TOOLS / 2024</span><span class="sn-visual__bars"><i></i><i></i><i></i><i></i></span><span class="sn-visual__caption">ONE SOURCE OF TRUTH</span></div>
+                <div class="sn-work-card__body">
+                    <p class="sn-card-meta">Atlas · Revenue operations</p>
+                    <h3>Give a growing team one clear view of the work moving through the business.</h3>
+                    <p>A focused dashboard replacing spreadsheets, manual handoffs, and a weekly reporting scramble.</p>
+                    <div class="sn-tags"><span>Next.js</span><span>Node</span><span>Postgres</span></div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="sn-section sn-why" aria-labelledby="why-title">
+        <div class="sn-section__heading sn-reveal">
+            <div>
+                <p class="sn-kicker">The studio model</p>
+                <h2 id="why-title">Why founders pick a seven-person studio over a <em>50-person agency.</em></h2>
+            </div>
+        </div>
+        <div class="sn-differentiators">
+            <article class="sn-diff sn-reveal"><span>01</span>
+                <h3>Direct access</h3>
+                <p>No account-manager relay. You talk to the people making the technical and product decisions.</p>
+            </article>
+            <article class="sn-diff sn-reveal"><span>02</span>
+                <h3>Senior-only team</h3>
+                <p>Every project is shaped and shipped by experienced builders, not handed down a staffing ladder.</p>
+            </article>
+            <article class="sn-diff sn-reveal"><span>03</span>
+                <h3>Less ceremony</h3>
+                <p>Small team, short feedback loops, and enough process to stay clear without slowing the work down.</p>
+            </article>
+            <article class="sn-diff sn-reveal"><span>04</span>
+                <h3>AI-native approach</h3>
+                <p>We use modern AI tools in the product and in the build process where they make the outcome better.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="sn-section sn-process" id="process">
+        <div class="sn-section__heading sn-reveal">
+            <div>
+                <p class="sn-kicker">Our process</p>
+                <h2>From idea to shipped, in <em>four steps.</em></h2>
+            </div>
+            <p class="sn-section__intro">A clear path, with working software and useful decisions at every stage.</p>
+        </div>
+        <div class="sn-stepper">
+            <article class="sn-step sn-reveal">
+                <div class="sn-step__top"><span>01</span><span class="sn-step__time">3–5 days</span></div>
+                <h3>Discovery</h3>
+                <p>We clarify the problem, users, constraints, and the smallest version worth building.</p>
+            </article>
+            <article class="sn-step sn-reveal">
+                <div class="sn-step__top"><span>02</span><span class="sn-step__time">1–2 weeks</span></div>
+                <h3>Design / architecture</h3>
+                <p>We map the experience and technical shape before committing to a large build.</p>
+            </article>
+            <article class="sn-step sn-reveal">
+                <div class="sn-step__top"><span>03</span><span class="sn-step__time">2–8 weeks</span></div>
+                <h3>Build</h3>
+                <p>We work in tight loops, share progress early, and keep the product usable throughout.</p>
+            </article>
+            <article class="sn-step sn-reveal">
+                <div class="sn-step__top"><span>04</span><span class="sn-step__time">ongoing</span></div>
+                <h3>Ship &amp; support</h3>
+                <p>We deploy, measure, document, and stay close enough to make the next move with confidence.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="sn-section sn-stack" id="stack">
+        <div class="sn-section__heading sn-reveal">
+            <div>
+                <p class="sn-kicker">The toolkit</p>
+                <h2>The tools behind the <em>builds.</em></h2>
+            </div>
+            <p class="sn-section__intro">A practical stack chosen for speed, clarity, and the job at hand — not for trend-chasing.</p>
+        </div>
+        <div class="sn-stack__grid sn-reveal" aria-label="Technologies we work with">
+            <div class="sn-stack__item"><span class="sn-stack__glyph">R</span><span>React</span></div>
+            <div class="sn-stack__item"><span class="sn-stack__glyph">N</span><span>Next.js</span></div>
+            <div class="sn-stack__item"><span class="sn-stack__glyph">⌘</span><span>Node.js</span></div>
+            <div class="sn-stack__item"><span class="sn-stack__glyph">Py</span><span>Python</span></div>
+            <div class="sn-stack__item"><span class="sn-stack__glyph">◎</span><span>LLM APIs</span></div>
+            <div class="sn-stack__item"><span class="sn-stack__glyph">◈</span><span>Postgres</span></div>
+            <div class="sn-stack__item"><span class="sn-stack__glyph">▲</span><span>Vercel</span></div>
+            <div class="sn-stack__item"><span class="sn-stack__glyph">☁</span><span>Cloud</span></div>
+        </div>
+    </section>
+
+    <section class="sn-section sn-testimonials" id="testimonials">
+        <div class="sn-section__heading sn-reveal">
+            <div>
+                <p class="sn-kicker">Client notes</p>
+                <h2>What it’s like working <em>with us.</em></h2>
+            </div>
+        </div>
+        <div class="sn-testimonial-grid">
+            <blockquote class="sn-quote sn-quote--primary sn-reveal"><span class="sn-quote__mark">“</span>
+                <p>They took a messy product idea, found the actual shape of it, and had a working version in our hands before a larger agency would have finished the kickoff.</p>
+                <footer><strong>Founder</strong><span>Early-stage product team</span></footer>
+            </blockquote>
+            <blockquote class="sn-quote sn-reveal"><span class="sn-quote__mark">“</span>
+                <p>The difference was having senior engineers in the room every week. Decisions got made quickly, and nothing disappeared into a ticketing process.</p>
+                <footer><strong>Head of Operations</strong><span>Growth-stage company</span></footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="sn-final-cta sn-reveal" id="contact">
+        <div class="sn-final-cta__glow"></div>
+        <p class="sn-kicker">Let’s make the first move</p>
+        <h2>Got something <em>worth building?</em></h2>
+        <p>Tell us what you’re trying to make, what’s getting in the way, and where you want to go next.</p><a class="sn-final-cta__button" href="mailto:hello@septaneuron.com">Start a project <span>↗</span></a>
+    </section>
+</main>
+{% endblock %} {% block page_scripts %}
+<script src="{{ url_for('static', filename='assets/js/homepage-sections.js') }}"></script>{% endblock %}

@@ -1,0 +1,189 @@
+{% extends "base.html" %} {% block title %}About | Septaneuron{% endblock %} {% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/about.css') }}">{% endblock %} {% block content %}
+
+<div class="ab-ambient" aria-hidden="true">
+    <div class="ab-grid"></div>
+    <div class="ab-orb ab-orb--a"></div>
+    <div class="ab-orb ab-orb--b"></div>
+</div>
+<section class="hero ab-hero" id="home"><canvas class="thread-canvas" id="threadCanvas"></canvas>
+    <div class="hero-scrim"></div>
+    <div class="hero-content">
+        <div class="ab-hero__main"><span class="ab-kicker">About Septaneuron</span>
+            <h1>Seven builders. <em>One studio.</em></h1>
+            <p>Septaneuron is a software studio building AI systems, web applications, automation, and digital products for people with problems worth solving.</p><small>Small by design. Technical by nature. Accountable from idea to deployment.</small>
+            <div class="ab-actions"><a class="ab-btn ab-btn--light" href="#team">Meet the team <span>↓</span></a><a class="ab-btn ab-btn--glass" href="#contact">Start a project <span>↗</span></a></div>
+        </div>
+        <div class="hero-footer">Seven builders. One studio.</div>
+    </div>
+</section>
+<section class="ab-section ab-who" id="who">
+    <div class="ab-copy ab-reveal"><span class="ab-kicker">Who we are</span>
+        <h2>We’re a small team building things that <em>matter.</em></h2>
+        <p>Septaneuron was started by seven builders with different technical strengths and a shared interest in creating useful software. We work across artificial intelligence, machine learning, full-stack development, automation, design, and digital products.</p>
+        <p>Rather than operating as a large agency with layers between clients and engineers, we keep the team close to the work. The people shaping the solution are the people building it.</p>
+    </div>
+    <div class="ab-seven ab-reveal">
+        <div class="ab-seven__rings"></div><strong>7</strong><span>BUILDERS</span>
+        <div class="ab-seven__labels"><i>AI</i><i>WEB</i><i>AUTOMATION</i><i>DESIGN</i><i>PRODUCT</i></div>
+    </div>
+</section>
+<section class="ab-section">
+    <div class="ab-heading ab-reveal">
+        <div><span class="ab-kicker">What we do</span>
+            <h2>We turn ideas into <em>working software.</em></h2>
+        </div>
+        <p>From an early product idea to an existing system that needs improving, we bring product thinking and engineering together.</p>
+    </div>
+    <div class="ab-capabilities">
+        <article class="ab-reveal"><b>01</b>
+            <h3>AI &amp; Machine Learning</h3>
+            <p>AI applications, computer vision, NLP, LLM integrations, and intelligent workflows.</p>
+        </article>
+        <article class="ab-reveal"><b>02</b>
+            <h3>Web &amp; Full-Stack Development</h3>
+            <p>Modern interfaces, web applications, APIs, authentication, databases, and production systems.</p>
+        </article>
+        <article class="ab-reveal"><b>03</b>
+            <h3>Automation</h3>
+            <p>Workflow automation, API integrations, data pipelines, and systems that remove repetitive work.</p>
+        </article>
+        <article class="ab-reveal"><b>04</b>
+            <h3>Internal Tools</h3>
+            <p>Dashboards, admin panels, management systems, and operational software built around the business.</p>
+        </article>
+        <article class="ab-reveal"><b>05</b>
+            <h3>Product Engineering</h3>
+            <p>MVPs, prototypes, existing-product improvements, and technical foundations for growing products.</p>
+        </article>
+    </div><a class="ab-link" href="{{ url_for('services') }}">Explore our services <span>→</span></a></section>
+<section class="ab-section ab-philosophy">
+    <div class="ab-heading ab-reveal">
+        <div><span class="ab-kicker">Why Septaneuron exists</span>
+            <h2>Built around a <em>simple idea.</em></h2>
+        </div>
+    </div>
+    <div class="ab-editorial ab-reveal">
+        <p>Good software doesn’t need a huge team behind it. It needs the right people, clear communication, sound technical decisions, and enough ownership to carry an idea from beginning to end.</p>
+        <p>We built Septaneuron around that belief. A smaller team means fewer handoffs, faster decisions, direct communication, and more responsibility for the people actually writing the software.</p>
+    </div>
+    <div class="ab-statements">
+        <article class="ab-reveal"><b>01</b>
+            <h3>Less distance</h3>
+            <p>The people making decisions stay close to the people using the product.</p>
+        </article>
+        <article class="ab-reveal"><b>02</b>
+            <h3>More ownership</h3>
+            <p>We don’t just deliver tickets. We take responsibility for the system.</p>
+        </article>
+        <article class="ab-reveal"><b>03</b>
+            <h3>Better decisions</h3>
+            <p>Technology is a tool. We choose it based on the problem.</p>
+        </article>
+    </div>
+</section>
+
+<section class="ab-section" id="team">
+    <div class="ab-heading ab-reveal">
+        <div><span class="ab-kicker">Meet the founders</span>
+            <h2>The people behind <em>Septaneuron.</em></h2>
+        </div>
+        <p>Seven founders. Different disciplines. One shared standard: build things properly.</p>
+    </div>
+    <div class="ab-team">
+        <article class="ab-person ab-reveal">
+            <div class="ab-person__portrait">MS</div><small>CEO &amp; CO-FOUNDER</small>
+            <h3>Muhammad Souman</h3>
+            <p>Full-Stack &amp; AI Developer</p>
+            <div><a href="#contact">LinkedIn</a><a href="#contact">GitHub</a></div>
+        </article>
+        <article class="ab-person ab-reveal">
+            <div class="ab-person__portrait">AI</div><small>CO-FOUNDER</small>
+            <h3>AI / ML Builder</h3>
+            <p>Machine Learning &amp; Computer Vision</p>
+            <div><a href="#contact">LinkedIn</a><a href="#contact">GitHub</a></div>
+        </article>
+        <article class="ab-person ab-reveal">
+            <div class="ab-person__portrait">SE</div><small>CO-FOUNDER</small>
+            <h3>Software Engineer</h3>
+            <p>Backend &amp; Product Systems</p>
+            <div><a href="#contact">LinkedIn</a><a href="#contact">GitHub</a></div>
+        </article>
+        <article class="ab-person ab-reveal">
+            <div class="ab-person__portrait">CR</div><small>CO-FOUNDER</small>
+            <h3>Creative Builder</h3>
+            <p>Design &amp; Visual Systems</p>
+            <div><a href="#contact">LinkedIn</a><a href="#contact">Portfolio</a></div>
+        </article>
+        <article class="ab-person ab-reveal">
+            <div class="ab-person__portrait">AU</div><small>CO-FOUNDER</small>
+            <h3>Automation Builder</h3>
+            <p>Integrations &amp; Workflows</p>
+            <div><a href="#contact">LinkedIn</a><a href="#contact">GitHub</a></div>
+        </article>
+        <article class="ab-person ab-reveal">
+            <div class="ab-person__portrait">VD</div><small>CO-FOUNDER</small>
+            <h3>Video &amp; Content</h3>
+            <p>Editing &amp; Digital Content</p>
+            <div><a href="#contact">LinkedIn</a><a href="#contact">Portfolio</a></div>
+        </article>
+        <article class="ab-person ab-reveal">
+            <div class="ab-person__portrait">GM</div><small>CO-FOUNDER</small>
+            <h3>Growth Builder</h3>
+            <p>SEO &amp; Social Media</p>
+            <div><a href="#contact">LinkedIn</a><a href="#contact">Portfolio</a></div>
+        </article>
+    </div>
+</section>
+
+<section class="ab-section ab-journey">
+    <div class="ab-heading ab-reveal">
+        <div><span class="ab-kicker">Our journey</span>
+            <h2>Still early. Already <em>building.</em></h2>
+        </div>
+    </div>
+    <div class="ab-timeline">
+        <article class="ab-reveal"><b>The Beginning</b>
+            <p>Seven builders decide to build something together.</p>
+        </article>
+        <article class="ab-reveal"><b>The Foundation</b>
+            <p>Septaneuron takes shape around software, AI, and digital product development.</p>
+        </article>
+        <article class="ab-reveal"><b>The First Builds</b>
+            <p>The team develops AI, web, and software projects across different domains.</p>
+        </article>
+        <article class="ab-reveal"><b>Today</b>
+            <p>Building the studio, strengthening the portfolio, and working toward long-term partnerships.</p>
+        </article>
+        <article class="ab-reveal"><b>What’s next</b>
+            <p>Build better products and grow without losing the small-team advantage.</p>
+        </article>
+    </div>
+</section>
+<section class="ab-section ab-vision">
+    <div class="ab-heading ab-reveal">
+        <div><span class="ab-kicker">Where we’re going</span>
+            <h2>We’re building more than <em>a service company.</em></h2>
+        </div>
+        <p>Over time, we want to build products of our own, work alongside ambitious teams, and create technology that goes beyond individual projects.</p>
+    </div>
+    <div class="ab-vision-grid">
+        <article class="ab-reveal"><b>Client work</b>
+            <p>Build useful software for businesses and founders.</p>
+        </article>
+        <article class="ab-reveal"><b>Products</b>
+            <p>Turn our own ideas into software people can use.</p>
+        </article>
+        <article class="ab-reveal"><b>Technology</b>
+            <p>Keep experimenting with AI and emerging technologies.</p>
+        </article>
+    </div>
+</section>
+<section class="ab-final" id="contact">
+    <div class="ab-final__glow"></div><span class="ab-kicker">Seven people. One starting point.</span>
+    <h2>Have a problem <em>worth solving?</em></h2>
+    <p>Tell us what you’re building, where you’re stuck, and what you want to change. We’ll figure out the next step together.</p>
+    <div><a class="ab-btn ab-btn--light" href="mailto:hello@septaneuron.com">Start a project <span>↗</span></a><a class="ab-btn ab-btn--glass" href="#team">Meet the team <span>↑</span></a></div>
+</section>
+{% endblock %} {% block page_scripts %}
+<script src="{{ url_for('static', filename='assets/js/about.js') }}"></script>{% endblock %}

@@ -1,0 +1,60 @@
+<footer class="sn-footer" id="snFooter">
+    <div class="sn-footer__particles"></div>
+
+    <div class="sn-footer__top">
+        <div class="sn-footer__col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+
+        <div class="sn-footer__col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="{{ url_for('home') }}">AI Product Builds</a></li>
+                <li><a href="{{ url_for('home') }}">Automation & Agents</a></li>
+                <li><a href="{{ url_for('home') }}">Full-Stack Development</a></li>
+                <li><a href="{{ url_for('home') }}">MVP Sprints</a></li>
+            </ul>
+        </div>
+
+        <div class="sn-footer__col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Careers</a></li>
+                <li><a href="{{ url_for('home') }}">Case Studies</a></li>
+                <li><a href="{{ url_for('home') }}">Process</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="sn-footer__newsletter">
+            <h4>Sign up for updates on what we're shipping</h4>
+            <form class="sn-footer__form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div class="sn-footer__social">
+                <a href="{{ url_for('home') }}" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97V21H9z"/></svg></a>
+                <a href="{{ url_for('home') }}" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H22l-6.6 7.5L23 21h-6.6l-5.2-6.8L5 21H2l7.1-8.1L2 3h6.7l4.7 6.2L18.9 3z"/></svg></a>
+                <a href="{{ url_for('home') }}" aria-label="Email"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 4h20v16H2V4zm2 2v.4l8 6 8-6V6H4zm16 3.1-8 6-8-6V18h16V9.1z"/></svg></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="sn-footer__wordmark">
+        <img class="sn-footer__mark" src="{{ url_for('static', filename='assets/imgs/septaneuron.png') }}" alt="Septaneuron logo">
+        <span class="sn-footer__text is-shimmering">SEPTANEURON</span>
+    </div>
+
+    <div class="sn-footer__bottom">
+        <div class="sn-footer__legal">
+            <a href="{{ url_for('home') }}">Privacy policy</a>
+            <a href="{{ url_for('home') }}">Terms of service</a>
+        </div>
+    </div>
+</footer>
