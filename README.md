@@ -2,7 +2,7 @@
 
 This project converts the available React/Vite page structure into Flask and Jinja templates while preserving the original Septaneuron visual system.
 
-## Structure
+## Structure.
 
 ```text
 flask-app/
