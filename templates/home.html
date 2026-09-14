@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block title %}Septaneuron{% endblock %} {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/homepage-sections.css') }}">{% endblock %} {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/homepage-sections.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/about.css') }}">{% endblock %} {% block content %}
 
 <div class="sn-ambient" aria-hidden="true">
     <div class="sn-ambient__orb sn-ambient__orb--one"></div>
@@ -30,14 +31,11 @@
             </p>
 
             <div class="hero-actions">
-                <button class="btn-primary">Start a project</button>
-                <button class="btn-secondary">See our work</button>
+                <a class="ab-btn ab-btn--glass" href="{{ url_for('contact') }}">Start a project</a>
+                <a class="ab-btn ab-btn--light" href="{{ url_for('portfolio') }}">See our work</a>
             </div>
         </div>
 
-        <div class="hero-footer">
-            Seven builders. One studio.
-        </div>
     </div>
 </div>
 
@@ -63,22 +61,22 @@
             <p class="sn-section__intro">From the first technical decision to the last production deploy, we keep the build in one senior team.</p>
         </div>
         <div class="sn-capability-grid">
-            <article class="sn-capability-card sn-reveal"><span class="sn-card-index">01</span>
+            <article class="sn-capability-card sn-beam-card sn-reveal" data-beam-size="180"><span class="sn-card-index">01</span>
                 <h3>AI products &amp; agents</h3>
                 <p>LLM-powered products, copilots, retrieval systems, and agent workflows that connect to the tools your team already uses.</p><span class="sn-card-arrow">↗</span></article>
-            <article class="sn-capability-card sn-reveal"><span class="sn-card-index">02</span>
+            <article class="sn-capability-card sn-beam-card sn-reveal" data-beam-size="180"><span class="sn-card-index">02</span>
                 <h3>Workflow automation</h3>
                 <p>Reliable automations that move data, trigger actions, and remove repetitive work across your operations.</p><span class="sn-card-arrow">↗</span></article>
-            <article class="sn-capability-card sn-reveal"><span class="sn-card-index">03</span>
+            <article class="sn-capability-card sn-beam-card sn-reveal" data-beam-size="180"><span class="sn-card-index">03</span>
                 <h3>Full-stack web apps</h3>
                 <p>Production-ready interfaces, APIs, authentication, payments, and the infrastructure underneath them.</p><span class="sn-card-arrow">↗</span></article>
-            <article class="sn-capability-card sn-reveal"><span class="sn-card-index">04</span>
+            <article class="sn-capability-card sn-beam-card sn-reveal" data-beam-size="180"><span class="sn-card-index">04</span>
                 <h3>Internal tools &amp; dashboards</h3>
                 <p>Focused software for the teams behind the scenes: admin panels, reporting, ops consoles, and data views.</p><span class="sn-card-arrow">↗</span></article>
-            <article class="sn-capability-card sn-reveal"><span class="sn-card-index">05</span>
+            <article class="sn-capability-card sn-beam-card sn-reveal" data-beam-size="180"><span class="sn-card-index">05</span>
                 <h3>API &amp; backend systems</h3>
                 <p>Well-shaped services, integrations, queues, and data models designed to stay understandable as you grow.</p><span class="sn-card-arrow">↗</span></article>
-            <article class="sn-capability-card sn-reveal"><span class="sn-card-index">06</span>
+            <article class="sn-capability-card sn-beam-card sn-reveal" data-beam-size="180"><span class="sn-card-index">06</span>
                 <h3>MVP builds for startups</h3>
                 <p>A narrow, usable first version that answers the important product questions without building a disposable prototype.</p><span class="sn-card-arrow">↗</span></article>
         </div>
@@ -93,7 +91,7 @@
             <p class="sn-section__intro">A small studio is at its best when the work speaks plainly. Here are two representative builds.</p>
         </div>
         <div class="sn-work-grid">
-            <article class="sn-work-card sn-work-card--feature sn-reveal">
+            <article class="sn-work-card sn-work-card--feature sn-reveal sn-beam-card" data-beam-size="250">
                 <div class="sn-work-card__visual sn-visual--signal"><span class="sn-visual__label">AI OPERATIONS / 2025</span><span class="sn-visual__pulse"></span><span class="sn-visual__metric">−42%<small>time to resolution</small></span></div>
                 <div class="sn-work-card__body">
                     <p class="sn-card-meta">SignalDesk · AI operations platform</p>
@@ -102,7 +100,7 @@
                     <div class="sn-tags"><span>React</span><span>Python</span><span>LLM APIs</span></div>
                 </div>
             </article>
-            <article class="sn-work-card sn-reveal">
+            <article class="sn-work-card sn-reveal sn-beam-card" data-beam-size="250">
                 <div class="sn-work-card__visual sn-visual--atlas"><span class="sn-visual__label">INTERNAL TOOLS / 2024</span><span class="sn-visual__bars"><i></i><i></i><i></i><i></i></span><span class="sn-visual__caption">ONE SOURCE OF TRUTH</span></div>
                 <div class="sn-work-card__body">
                     <p class="sn-card-meta">Atlas · Revenue operations</p>
@@ -216,7 +214,7 @@
         <div class="sn-final-cta__glow"></div>
         <p class="sn-kicker">Let’s make the first move</p>
         <h2>Got something <em>worth building?</em></h2>
-        <p>Tell us what you’re trying to make, what’s getting in the way, and where you want to go next.</p><a class="sn-final-cta__button" href="mailto:hello@septaneuron.com">Start a project <span>↗</span></a>
+        <p>Tell us what you’re trying to make, what’s getting in the way, and where you want to go next.</p><a class="sn-final-cta__button" href="{{ url_for('contact') }}">Start a project <span>↗</span></a>
     </section>
 </main>
 {% endblock %} {% block page_scripts %}

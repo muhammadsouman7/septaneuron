@@ -13,9 +13,8 @@
         <div class="pf-hero__main"><span class="pf-kicker">Selected work</span>
             <h1>Things we’ve <em>built.</em></h1>
             <p>A collection of AI systems, web applications, internal tools, and experiments built by the Septaneuron team — from independent builds to live products.</p>
-            <div class="pf-actions"><a class="pf-btn pf-btn--light" href="#featured">Explore our work <span>↓</span></a><a class="pf-btn pf-btn--glass" href="#contact">Start a project <span>↗</span></a></div>
+            <div class="pf-actions"><a class="pf-btn pf-btn--light" href="#featured">Explore our work <span>↓</span></a><a class="pf-btn pf-btn--glass" href="{{ url_for('contact') }}">Start a project <span>↗</span></a></div>
         </div>
-        <div class="hero-footer">Built across AI, software engineering &amp; product development</div>
     </div>
 </section>
 <section class="pf-proof">
@@ -156,7 +155,7 @@
     <div class="pf-final__glow"></div><span class="pf-kicker">Have a project in mind?</span>
     <h2>Your next build could be <em>here.</em></h2>
     <p>Tell us what you’re trying to build and we’ll help turn the idea into something real.</p>
-    <div><a class="pf-btn pf-btn--light" href="mailto:hello@septaneuron.com">Start a project <span>↗</span></a><a class="pf-btn pf-btn--glass" href="{{ url_for('services') }}">Explore services <span>→</span></a></div>
+    <div><a class="pf-btn pf-btn--light" href="{{ url_for('contact') }}">Start a project <span>↗</span></a><a class="pf-btn pf-btn--glass" href="{{ url_for('services') }}">Explore services <span>→</span></a></div>
 </section>
 
 {% endblock %} {% block page_scripts %}

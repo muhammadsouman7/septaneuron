@@ -14,8 +14,7 @@
         <div class="svc-kicker">What we build</div>
         <h1>Software that solves the problem, <em>not just the brief.</em></h1>
         <p>Septaneuron builds AI systems, web applications, and the backend infrastructure underneath them — for teams that need useful outcomes, not just deliverables.</p>
-        <div class="svc-hero__actions"><a class="svc-btn svc-btn--light" href="#contact">Start a project <span>↗</span></a><a class="svc-btn svc-btn--glass" href="{{ url_for('home') }}#work">See our work <span>↗</span></a></div>
-        <div class="svc-hero__footer">Seven builders. One studio.</div>
+        <div class="svc-hero__actions"><a class="svc-btn svc-btn--light" href="{{ url_for('contact') }}">Start a project <span>↗</span></a><a class="svc-btn svc-btn--glass" href="{{ url_for('portfolio') }}">See our work <span>↗</span></a></div>
     </div>
 </section>
 
@@ -81,7 +80,7 @@
         <div class="svc-flow__node"><strong>01</strong><span>Input</span><small>data enters</small></div><i>→</i>
         <div class="svc-flow__node"><strong>02</strong><span>Logic</span><small>rules decide</small></div><i>→</i>
         <div class="svc-flow__node"><strong>03</strong><span>API</span><small>systems connect</small></div><i>→</i>
-        <div class="svc-flow__node svc-flow__node--result"><strong>04</strong><span>Result</span><small>people progress</small></div>
+        <div class="svc-flow__node"><strong>04</strong><span>Result</span><small>people progress</small></div>
     </div>
     <div class="svc-bottom-row">
         <div class="svc-pill-grid svc-pill-grid--wide"><span>Process automation</span><span>API integrations</span><span>Webhooks</span><span>Admin panels</span><span>Business dashboards</span><span>Reporting tools</span></div><a class="svc-arrow-link" href="#contact">Automate a workflow <span>→</span></a></div>
@@ -196,7 +195,7 @@
     <div class="svc-final__glow"></div><span class="svc-kicker">Have a problem worth solving?</span>
     <h2>Let's build something <em>useful.</em></h2>
     <p>Tell us what you're trying to build, where you're stuck, and what success looks like.</p>
-    <div><a class="svc-btn svc-btn--light" href="mailto:hello@septaneuron.com">Start a project <span>↗</span></a></div>
+    <div><a class="svc-btn svc-btn--light" href="{{ url_for('contact') }}">Start a project <span>↗</span></a></div>
 </section>
 
 {% endblock %} {% block page_scripts %}

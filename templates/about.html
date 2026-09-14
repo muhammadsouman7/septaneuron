@@ -1,6 +1,5 @@
 {% extends "base.html" %} {% block title %}About | Septaneuron{% endblock %} {% block page_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/about.css') }}">{% endblock %} {% block content %}
-
 <div class="ab-ambient" aria-hidden="true">
     <div class="ab-grid"></div>
     <div class="ab-orb ab-orb--a"></div>
@@ -12,9 +11,8 @@
         <div class="ab-hero__main"><span class="ab-kicker">About Septaneuron</span>
             <h1>Seven builders. <em>One studio.</em></h1>
             <p>Septaneuron is a software studio building AI systems, web applications, automation, and digital products for people with problems worth solving.</p><small>Small by design. Technical by nature. Accountable from idea to deployment.</small>
-            <div class="ab-actions"><a class="ab-btn ab-btn--light" href="#team">Meet the team <span>↓</span></a><a class="ab-btn ab-btn--glass" href="#contact">Start a project <span>↗</span></a></div>
+            <div class="ab-actions"><a class="ab-btn ab-btn--light" href="#team">Meet the team <span>↓</span></a><a class="ab-btn ab-btn--glass" href="{{ url_for('contact') }}">Start a project <span>↗</span></a></div>
         </div>
-        <div class="hero-footer">Seven builders. One studio.</div>
     </div>
 </section>
 <section class="ab-section ab-who" id="who">
@@ -28,35 +26,62 @@
         <div class="ab-seven__labels"><i>AI</i><i>WEB</i><i>AUTOMATION</i><i>DESIGN</i><i>PRODUCT</i></div>
     </div>
 </section>
-<section class="ab-section">
+<section class="ab-section ab-what" id="what-we-do">
     <div class="ab-heading ab-reveal">
         <div><span class="ab-kicker">What we do</span>
-            <h2>We turn ideas into <em>working software.</em></h2>
+            <h2>One team for the <em>whole build.</em></h2>
         </div>
-        <p>From an early product idea to an existing system that needs improving, we bring product thinking and engineering together.</p>
+        <p>We bring product thinking, engineering, automation, and creative capability together instead of splitting the work between disconnected specialists.</p>
     </div>
-    <div class="ab-capabilities">
-        <article class="ab-reveal"><b>01</b>
-            <h3>AI &amp; Machine Learning</h3>
-            <p>AI applications, computer vision, NLP, LLM integrations, and intelligent workflows.</p>
+    <div class="ab-what__grid">
+        <article class="ab-what-card ab-what-card--wide ab-reveal" data-card-number="01" data-hover-title="Systems that think">
+            <span class="ab-bento-number">01</span>
+            <div class="ab-card-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="ab-what-card__copy">
+                <h3>AI &amp; Automation</h3>
+                <p>AI agents, LLM integrations, computer vision, and workflows that remove repetitive work.</p>
+            </div>
+            <strong class="ab-bento-watermark">01</strong>
         </article>
-        <article class="ab-reveal"><b>02</b>
-            <h3>Web &amp; Full-Stack Development</h3>
-            <p>Modern interfaces, web applications, APIs, authentication, databases, and production systems.</p>
+        <article class="ab-what-card ab-what-card--tall ab-reveal" data-card-number="02" data-hover-title="Idea to production">
+            <span class="ab-bento-number">02</span>
+            <div class="ab-stack-visual" aria-hidden="true"><i></i><i></i><i></i><i></i><b>IDEA.<br>ARCHITECTURE.<br>PRODUCTION.</b><small>&gt; READY TO EXECUTE_</small></div>
+            <div class="ab-what-card__copy">
+                <h3>From idea to production</h3>
+                <p>We map, build, deploy, and support the product end to end.</p>
+            </div>
+            <strong class="ab-bento-watermark">02</strong>
         </article>
-        <article class="ab-reveal"><b>03</b>
-            <h3>Automation</h3>
-            <p>Workflow automation, API integrations, data pipelines, and systems that remove repetitive work.</p>
+        <article class="ab-what-card ab-reveal" data-card-number="03" data-hover-title="Senior people, close to the work">
+            <span class="ab-bento-number">03</span>
+            <div class="ab-avatar-stack" aria-hidden="true"><i>AI</i><i>SE</i><i>CR</i><i>AU</i><i>VD</i></div>
+            <div class="ab-what-card__copy">
+                <h3>Experienced builders</h3>
+                <p>Work directly with senior engineers and creators from kickoff through launch.</p>
+            </div>
+            <strong class="ab-bento-watermark">03</strong>
         </article>
-        <article class="ab-reveal"><b>04</b>
-            <h3>Internal Tools</h3>
-            <p>Dashboards, admin panels, management systems, and operational software built around the business.</p>
+        <article class="ab-what-card ab-reveal" data-card-number="04" data-hover-title="One connected team">
+            <span class="ab-bento-number">04</span>
+            <div class="ab-pipeline" aria-hidden="true"><span>CALL</span><i>›</i><span>PLAN</span><i>›</i><span>BUILD</span><i>›</i><span>DEPLOY</span><i>›</i><span>LAUNCH</span></div>
+            <div class="ab-what-card__copy">
+                <h3>No handoffs</h3>
+                <p>The people on your first call are the people shipping the work.</p>
+            </div>
+            <strong class="ab-bento-watermark">04</strong>
         </article>
-        <article class="ab-reveal"><b>05</b>
-            <h3>Product Engineering</h3>
-            <p>MVPs, prototypes, existing-product improvements, and technical foundations for growing products.</p>
+        <article class="ab-what-card ab-what-card--wide-bottom ab-reveal" data-card-number="05" data-hover-title="Go deep where it matters">
+            <span class="ab-bento-number">05</span>
+            <div class="ab-layer-visual" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="ab-what-card__copy">
+                <h3>Deep engineering</h3>
+                <p>Web, backend, AI, data, and creative systems in one cohesive team.</p>
+            </div>
+            <strong class="ab-bento-watermark">05</strong>
         </article>
-    </div><a class="ab-link" href="{{ url_for('services') }}">Explore our services <span>→</span></a></section>
+    </div>
+    <a class="ab-link" href="{{ url_for('services') }}">Explore our services <span>→</span></a>
+</section>
 <section class="ab-section ab-philosophy">
     <div class="ab-heading ab-reveal">
         <div><span class="ab-kicker">Why Septaneuron exists</span>
@@ -79,6 +104,46 @@
         <article class="ab-reveal"><b>03</b>
             <h3>Better decisions</h3>
             <p>Technology is a tool. We choose it based on the problem.</p>
+        </article>
+    </div>
+</section>
+<section class="ab-section ab-why" id="why-us">
+    <div class="ab-heading ab-reveal">
+        <div><span class="ab-kicker">Why Septaneuron</span>
+            <h2>Small enough to stay close. <em>Senior enough to go deep.</em></h2>
+        </div>
+        <p>A compact team gives you fewer layers, faster decisions, and real ownership from the first conversation to production.</p>
+    </div>
+    <div class="ab-why__grid">
+        <article class="ab-why-card ab-why-card--wide ab-reveal">
+            <div class="ab-why-card__visual ab-why-card__visual--signal"><span>DIRECT ACCESS</span><b>01</b><i></i><i></i><i></i></div>
+            <div>
+                <h3>Talk to the people doing the work.</h3>
+                <p>No account-manager relay. The people shaping the solution are the people building it.</p>
+            </div>
+        </article>
+        <article class="ab-why-card ab-reveal">
+            <div class="ab-why-card__visual ab-why-card__visual--team"><span>TEAM / 07</span><b>02</b>
+                <div><i>AI</i><i>SE</i><i>CR</i><i>AU</i></div>
+            </div>
+            <h3>Senior-only team.</h3>
+            <p>No rotating benches or staffing ladder between you and the outcome.</p>
+        </article>
+        <article class="ab-why-card ab-reveal">
+            <div class="ab-why-card__visual ab-why-card__visual--pipeline"><span>START → SHIP</span><b>03</b>
+                <div><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <h3>No bloated process.</h3>
+            <p>Short loops, useful decisions, and enough structure to keep momentum without ceremony.</p>
+        </article>
+        <article class="ab-why-card ab-why-card--wide-bottom ab-reveal">
+            <div class="ab-why-card__visual ab-why-card__visual--ai"><span>AI-NATIVE BUILDING</span><b>04</b>
+                <div class="ab-why-card__ai-core">AI</div>
+            </div>
+            <div>
+                <h3>Modern tools, grounded judgment.</h3>
+                <p>We use AI where it improves capability or speed, while keeping architecture understandable and outcomes measurable.</p>
+            </div>
         </article>
     </div>
 </section>
@@ -183,7 +248,7 @@
     <div class="ab-final__glow"></div><span class="ab-kicker">Seven people. One starting point.</span>
     <h2>Have a problem <em>worth solving?</em></h2>
     <p>Tell us what you’re building, where you’re stuck, and what you want to change. We’ll figure out the next step together.</p>
-    <div><a class="ab-btn ab-btn--light" href="mailto:hello@septaneuron.com">Start a project <span>↗</span></a><a class="ab-btn ab-btn--glass" href="#team">Meet the team <span>↑</span></a></div>
+    <div><a class="ab-btn ab-btn--light" href="{{ url_for('contact') }}">Start a project <span>↗</span></a><a class="ab-btn ab-btn--glass" href="#team">Meet the team <span>↑</span></a></div>
 </section>
 {% endblock %} {% block page_scripts %}
 <script src="{{ url_for('static', filename='assets/js/about.js') }}"></script>{% endblock %}
