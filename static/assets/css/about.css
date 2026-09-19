@@ -130,7 +130,8 @@
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    transition: transform .2s, background .2s
+    transition: transform .2s, background .2s;
+    justify-content: center;
 }
 
 .ab-btn:hover {
