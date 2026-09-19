@@ -26,40 +26,44 @@
         <div><span class="pf-kicker">Featured work</span>
             <h2>A few things we’ve <em>built.</em></h2>
         </div>
-        <p>Different problems call for different tools. Here’s a look at systems and products developed across AI and software engineering.</p>
+        <p>Different problems call for different tools. Here's a look at systems and products developed across AI and software engineering.</p>
     </div>
     <article class="pf-feature-card pf-reveal">
-        <div class="pf-feature-card__visual pf-vision-visual"><span class="pf-visual-label">AI / COMPUTER VISION</span>
-            <div class="pf-detection"><i></i><i></i><i></i><b>OBJECT / 004</b></div><span class="pf-visual-status">LIVE INFERENCE · 24 FPS</span></div>
+        <div class="pf-feature-card__visual pf-vision-visual pf-image-visual">
+            <img class="pf-project-image" src="{{ url_for('static', filename='assets/imgs/deepfake-detection.png') }}" alt="Object detection preview">
+            <span class="pf-visual-label">AI / COMPUTER VISION</span>
+        </div>
         <div class="pf-feature-card__body">
-            <div><span class="pf-card-index">01</span><span class="pf-card-type">AI / COMPUTER VISION</span></div>
-            <h3>Real-time object detection and image analysis.</h3>
-            <p>A computer vision system that identifies, classifies, and tracks objects from live image streams.</p><small>BUILT WITH</small>
-            <div class="pf-tags"><span>Python</span><span>OpenCV</span><span>YOLO</span><span>PyTorch</span></div>
-            <div class="pf-links"><a href="#case-studies">View project ↗</a><a href="#github">GitHub ↗</a></div>
+            <div><span class="pf-card-index">01</span><span class="pf-card-type">AI / EXPLAINABLE COMPUTER VISION</span></div>
+            <h3>A verdict you can actually verify.</h3>
+            <p>ResNet-50 and MTCNN flag deepfake video, then Grad-CAM shows exactly which region of the face drove the decision.</p><small>BUILT WITH</small>
+            <div class="pf-tags"><span>Flask</span><span>PyTorch</span><span>React</span></div>
+            <div class="pf-links"><a href="{{ url_for('case_study_deepfake_detection') }}">View Case Study ↗</a><a href="https://github.com/muhammadsouman7/XAI-Powered-DeepFake-Detection">GitHub ↗</a></div>
         </div>
     </article>
     <div class="pf-project-pair">
         <article class="pf-project-card pf-reveal">
-            <div class="pf-project-card__visual pf-web-visual"><span>WEB / FULL STACK</span>
-                <div class="pf-browser"><i></i><i></i><i></i><b></b><b></b><b></b></div>
+            <div class="pf-project-card__visual pf-web-visual pf-image-visual">
+                <img class="pf-project-image" src="{{ url_for('static', filename='assets/imgs/cartoon-emotion-and-face-detection.jpg') }}" alt="Cartoon face and emotion detection preview">
+                <span>AI / Computer Vision</span>
             </div>
-            <div class="pf-project-card__body"><span class="pf-card-type">FULL-STACK WEB APPLICATION</span>
-                <h3>Software that makes a complicated workflow feel simple.</h3>
-                <p>Frontend, backend, database, and the product decisions between them.</p>
-                <div class="pf-tags"><span>React</span><span>Flask</span><span>MySQL</span></div>
-                <div class="pf-links"><a href="#case-studies">View project ↗</a><a href="#github">GitHub ↗</a></div>
+            <div class="pf-project-card__body"><span class="pf-card-type">COMPUTER VISION WEB APPLICATION</span>
+                <h3>A cartoon face turned into a live emotion reading.</h3>
+                <p>YOLOv8 detection, MobileNetV2 classification, and a Flask app that ties both models to a simple upload-and-see interface.</p>
+                <div class="pf-tags"><span>Flask</span><span>PyTorch</span><span>YOLOv8</span></div>
+                <div class="pf-links"><a href="{{ url_for('case_study_cartoon_face_emotion_detection') }}">View Case Study ↗</a><a href="https://github.com/muhammadsouman7/Cartoon-Face-And-Emotion-Detection" target="_blank">GitHub ↗</a></div>
             </div>
         </article>
         <article class="pf-project-card pf-reveal">
-            <div class="pf-project-card__visual pf-data-visual"><span>DATA / AUTOMATION</span>
-                <div class="pf-data-bars"><i></i><i></i><i></i><i></i></div>
+            <div class="pf-project-card__visual pf-data-visual pf-image-visual">
+                <img class="pf-project-image" src="{{ url_for('static', filename='assets/imgs/kidney-stone-detection.jpeg') }}" alt="Kidney Stone detection preview">
+                <span>AI / COMPUTER VISION</span>
             </div>
-            <div class="pf-project-card__body"><span class="pf-card-type">AUTOMATION / INTERNAL TOOLS</span>
-                <h3>Move information where it needs to go.</h3>
-                <p>Systems that connect data sources, automate repeated actions, and give teams a clearer view.</p>
-                <div class="pf-tags"><span>Python</span><span>APIs</span><span>Postgres</span></div>
-                <div class="pf-links"><a href="#case-studies">View project ↗</a><a href="#github">GitHub ↗</a></div>
+            <div class="pf-project-card__body"><span class="pf-card-type">AI / HEALTHCARE COMPUTER VISION</span>
+                <h3>Turn a CT scan into a diagnostic signal in seconds.</h3>
+                <p>A custom-trained YOLO model detects kidney stones, logs every scan, and hands back a PDF report — no manual review required.</p>
+                <div class="pf-tags"><span>Flask</span><span>Ultralytics YOLO</span><span>SQLite</span></div>
+                <div class="pf-links"><a href="{{ url_for('case_study_kidney_stone_detection') }}">View Case Study ↗</a><a href="https://github.com/anas-rajpout07/Kidney-Stone-Detection" target="_blank">GitHub ↗</a></div>
             </div>
         </article>
     </div>
@@ -71,21 +75,28 @@
         </div>
     </div>
     <div class="pf-filter" role="group" aria-label="Project categories"><button class="is-active" data-filter="all">All</button><button data-filter="ai">AI &amp; ML</button><button data-filter="vision">Computer Vision</button><button data-filter="web">Web Development</button><button data-filter="automation">Automation</button>
-        <button data-filter="tools">Internal Tools</button>
     </div>
     <div class="pf-grid">
         <article class="pf-mini-card pf-reveal" data-category="vision ai"><span class="pf-card-index">01</span><span class="pf-card-type">COMPUTER VISION</span>
-            <h3>Image analysis system</h3>
-            <p>Python · OpenCV · TensorFlow</p><a href="#github">GitHub ↗</a></article>
+            <h3>Students Attendance System</h3>
+            <p>OpenCV . SQLite . Face Recognition</p><a href="{{ url_for('case_study_face_recognition_attendance_system') }}" style="margin-right:10px;">View Case Study ↗</a><a href="https://github.com/anas-rajpout07/Face_Recognition_Project">GitHub ↗</a></article>
         <article class="pf-mini-card pf-reveal" data-category="web"><span class="pf-card-index">02</span><span class="pf-card-type">WEB DEVELOPMENT</span>
-            <h3>Customer portal</h3>
-            <p>React · Flask · MySQL</p><a href="#github">GitHub ↗</a></article>
-        <article class="pf-mini-card pf-reveal" data-category="automation tools"><span class="pf-card-index">03</span><span class="pf-card-type">INTERNAL TOOLS</span>
-            <h3>Operations dashboard</h3>
-            <p>Next.js · Node · Postgres</p><a href="#github">GitHub ↗</a></article>
-        <article class="pf-mini-card pf-reveal" data-category="ai automation"><span class="pf-card-index">04</span><span class="pf-card-type">AI / AUTOMATION</span>
-            <h3>Document intelligence</h3>
-            <p>Python · LLM APIs · RAG</p><a href="#github">GitHub ↗</a></article>
+            <h3>Dr. Adil Aziz Khan</h3>
+            <p>HTML5 . CSS3 . JavaScript . Bootstrap</p><a href="https://neurosurgeondradilazizkhan.com/">Visit ↗</a></article>
+        <article class="pf-mini-card pf-reveal" data-category="ai vision"><span class="pf-card-index">03</span><span class="pf-card-type">COMPUTER VISION</span>
+            <h3>XAI Powered DeepFake Detection</h3>
+            <p>React . Flask . PyTorch</p><a href="{{ url_for('case_study_deepfake_detection') }}" style="margin-right:10px;">View Case Study ↗</a><a href="https://github.com/muhammadsouman7/XAI-Powered-DeepFake-Detection">GitHub ↗</a></article>
+        <article class="pf-mini-card pf-reveal" data-category="ai automation"><span class="pf-card-index">04</span><span class="pf-card-type">AI / COMPUTER VISION</span>
+            <h3>Cartoon Face and Emotion Detection</h3>
+            <p>YOLOv8 . Flask . PyTorch</p><a href="{{ url_for('case_study_cartoon_face_emotion_detection') }}" style="margin-right:10px;">View Case Study ↗</a><a href="https://github.com/muhammadsouman7/Cartoon-Face-And-Emotion-Detection">GitHub ↗</a></article>
+
+        <article class="pf-mini-card pf-reveal" data-category="ai automation"><span class="pf-card-index">05</span><span class="pf-card-type">WEB DEVELOPMENT</span>
+            <h3>Shakir Bridal Couture</h3>
+            <p>Wordpress . Woocommerce . PHP</p><a href="https://shakirbridalcouture.com/">Visit ↗</a></article>
+
+        <article class="pf-mini-card pf-reveal" data-category="vision web ai"><span class="pf-card-index">05</span><span class="pf-card-type">AI / COMPUTER VISION</span>
+            <h3>Kidney Stone Detection</h3>
+            <p>YOLO . Flask . PyTorch</p><a href="{{ url_for('case_study_kidney_stone_detection') }}" style="margin-right:10px;">View Case Study ↗</a><a href="https://github.com/anas-rajpout07/Kidney-Stone-Detection">GitHub ↗</a></article>
     </div>
 </section>
 <section class="pf-section pf-live">
@@ -97,16 +108,22 @@
     </div>
     <div class="pf-live-grid">
         <article class="pf-live-card pf-reveal">
-            <div class="pf-live-card__screen pf-screen--one"><span>LIVE PROJECT / 01</span><strong>Product interface</strong></div>
-            <div><span class="pf-card-type">FULL-STACK WEB APPLICATION</span>
+            <div class="pf-live-card__screen pf-screen--one pf-image-visual">
+                <img class="pf-project-image" src="{{ url_for('static', filename='assets/imgs/shakir-bridal-couture.png') }}" alt="Shakir Bridal Couture preview">
+                <span>LIVE PROJECT / 01</span>
+            </div>
+            <div><span class="pf-card-type">WORDPRESS E-COMMERCE STORE</span>
                 <h3>Live product, built end to end.</h3>
-                <p>React · Flask · MySQL</p><a href="#contact">Visit website ↗</a></div>
+                <p>Wordpress · WooCommerce . PHP</p><a href="https://shakirbridalcouture.com/">Visit website ↗</a></div>
         </article>
         <article class="pf-live-card pf-reveal">
-            <div class="pf-live-card__screen pf-screen--two"><span>LIVE PROJECT / 02</span><strong>Working system</strong></div>
-            <div><span class="pf-card-type">WEB / PRODUCT ENGINEERING</span>
+            <div class="pf-live-card__screen pf-screen--two pf-image-visual">
+                <img class="pf-project-image" src="{{ url_for('static', filename='assets/imgs/dr-adil-aziz.png') }}" alt="Dr Adil Aziz Website preview">
+                <span>LIVE PROJECT / 02</span>
+            </div>
+            <div><span class="pf-card-type">FRONTEND WEB APPLICATION</span>
                 <h3>From concept to accessible product.</h3>
-                <p>Next.js · Node · Cloud</p><a href="#contact">Visit website ↗</a></div>
+                <p>HTML . CSS . JavaScript . Bootstrap</p><a href="https://neurosurgeondradilazizkhan.com/">Visit website ↗</a></div>
         </article>
     </div>
 </section>

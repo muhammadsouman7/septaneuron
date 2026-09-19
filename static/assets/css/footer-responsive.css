@@ -52,3 +52,38 @@
         animation: none;
     }
 }
+
+
+/* Responsive footer overrides and live wordmark font. */
+
+@font-face {
+    font-family: 'Ethnocentric';
+    src: url('../fonts/Ethnocentric-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+.sn-footer__top--links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sn-footer__text {
+    font-family: 'Ethnocentric', sans-serif;
+    font-weight: 400;
+}
+
+@media(max-width:900px) {
+    .sn-footer__top--links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media(max-width:720px) {
+    .sn-footer__top--links {
+        grid-template-columns: 1fr;
+    }
+    .sn-footer__text {
+        font-size: clamp(42px, 13vw, 96px);
+    }
+}

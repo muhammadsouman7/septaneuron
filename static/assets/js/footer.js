@@ -80,30 +80,4 @@
     fitWordmark();
     setTimeout(fitWordmark, 50);
 
-    // ---- Newsletter form ----
-    const form = footer.querySelector('.sn-footer__form');
-    if (form) {
-        const input = form.querySelector('input');
-        const button = form.querySelector('button');
-
-        form.addEventListener('submit', (e) => e.preventDefault());
-
-        button.addEventListener('click', () => {
-            const value = (input.value || '').trim();
-            if (!value || !value.includes('@')) {
-                input.style.borderColor = '#ff6b6b';
-                setTimeout(() => { input.style.borderColor = ''; }, 1200);
-                return;
-            }
-            button.textContent = 'Subscribed ✓';
-            button.classList.add('is-sent');
-            input.value = '';
-            input.disabled = true;
-            setTimeout(() => {
-                button.textContent = 'Subscribe';
-                button.classList.remove('is-sent');
-                input.disabled = false;
-            }, 2400);
-        });
-    }
 })();

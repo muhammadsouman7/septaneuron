@@ -1,4 +1,15 @@
 {% extends "base.html" %} {% block title %}Contact | Septaneuron{% endblock %} {% block page_css %}
+<!-- Primary Meta Tags -->
+<title>Contact Us | Get in Touch with Septaneuron Software Studio</title>
+<meta name="description" content="Have something worth building? Contact Septaneuron for custom AI development, web applications, workflow automation, and digital solutions." />
+<meta name="keywords" content="contact Septaneuron, hire AI developers, software development inquiry, hire software studio, custom app development quote" />
+
+<!-- Open Graph / Social Tags -->
+<meta property="og:title" content="Contact Us | Get in Touch with Septaneuron Software Studio" />
+<meta property="og:description" content="Tell us what you're trying to build, what problem you're solving, or where you're stuck. Let's start a conversation." />
+<meta property="og:type" content="website" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/contact.css') }}">{% endblock %} {% block content %}
 <div class="ct-ambient" aria-hidden="true">
     <div class="ct-grid"></div>
@@ -11,6 +22,7 @@
             <p>Tell us what you're trying to build, what problem you're solving, or where you're stuck. Give us as much or as little detail as you have — we'll take it from there.</p><a class="ct-btn ct-btn--light" href="#contact-form">Tell us about the project <span>↓</span></a></div>
     </div>
 </section>
+
 <section class="ct-section ct-form-section" id="contact-form">
     <div class="ct-heading ct-reveal">
         <div><span class="ct-kicker">The starting point</span>
@@ -19,16 +31,33 @@
         <p>A rough explanation is enough to start. You do not need a perfectly written specification.</p>
     </div>
     <div class="ct-form-layout">
-        <form class="ct-form ct-reveal" action="mailto:septaneuron@gmail.com" method="post" enctype="text/plain">
-            <div class="ct-form__row"><label>Name<input type="text" name="name" placeholder="Your name" required></label><label>Email<input type="email" name="email" placeholder="you@company.com" required></label></div><label>Company / Organization <small>optional</small><input type="text" name="company" placeholder="Your company"></label><label>What do you need help with?<select name="service" required><option value="" selected disabled>Select a service</option><option>AI / Machine Learning</option><option>Computer Vision</option><option>Web Application</option><option>Mobile Application</option><option>Automation</option><option>Backend / API</option><option>Internal Tool / Dashboard</option><option>Other</option></select></label><label>Project details<textarea name="details" rows="7" placeholder="What are you trying to build? What problem are you trying to solve? Include any useful context, requirements, links, or technical details." required></textarea></label>
-            <div class="ct-form__row"><label>Budget range <small>optional</small><select name="budget"><option>Not sure yet</option><option>Under $1,000</option><option>$1,000–$5,000</option><option>$5,000–$10,000</option><option>$10,000+</option><option>Prefer to discuss</option></select></label><label>Timeline <small>optional</small><select name="timeline"><option>As soon as possible</option><option>Within 1 month</option><option>1–3 months</option><option>Flexible</option><option>Just exploring</option></select></label></div>
+        <form class="ct-form ct-reveal" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="{{ web3forms_access_key }}">
+            <input type="hidden" name="subject" value="New Septaneuron project inquiry">
+            <input type="hidden" name="from_name" value="Septaneuron website">
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+            <div class="ct-form__row"><label>Name<input type="text" name="name" placeholder="Your name" required></label><label>Email<input type="email" name="email" placeholder="you@company.com" required></label></div><label>Company / Organization<input type="text" name="company" placeholder="Your company" required></label><label>What do you need help with?<select name="service" required><option value="" selected disabled>Select a service</option><option>AI / Machine Learning</option><option>Computer Vision</option><option>Web Application</option><option>Mobile Application</option><option>Automation</option><option>Backend / API</option><option>Internal Tool / Dashboard</option><option>Other</option></select></label><label>Project details<textarea name="details" rows="7" placeholder="What are you trying to build? What problem are you trying to solve? Include any useful context, requirements, links, or technical details." required></textarea></label>
+            <div class="ct-form__row"><label>Budget range<select name="budget" required><option>Not sure yet</option><option>Under $1,000</option><option>$1,000–$5,000</option><option>$5,000–$10,000</option><option>$10,000+</option><option>Prefer to discuss</option></select></label><label>Timeline<select name="timeline" required><option>As soon as possible</option><option>Within 1 month</option><option>1–3 months</option><option>Flexible</option><option>Just exploring</option></select></label></div>
             <button class="ct-btn ct-btn--submit" type="submit">Send inquiry <span>↗</span></button>
             <p class="ct-form__note">By sending this inquiry, you are starting a conversation — not committing to a project.</p>
         </form>
+        <div class="ct-modal" id="ctModal" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="ct-modal__backdrop" data-close></div>
+            <div class="ct-modal__box">
+                <span class="ct-modal__icon" id="ctModalIcon">✓</span>
+                <h3 id="ctModalTitle">Message sent</h3>
+                <p id="ctModalText">Thanks for reaching out — we'll get back to you soon.</p>
+                <button class="ct-btn ct-btn--light" data-close>Close</button>
+            </div>
+        </div>
         <aside class="ct-direct ct-reveal"><span class="ct-kicker">Prefer email?</span>
             <h3>Send us a message <em>directly.</em></h3>
-            <p>Skip the form if you prefer. Send us a note and we'll get back to you from there.</p><a class="ct-email" href="mailto:hello@septaneuron.com">hello@septaneuron.com <span>↗</span></a>
-            <div class="ct-socials"><a href="#">LinkedIn</a><a href="#">GitHub</a></div>
+            <p>Skip the form if you prefer. Send us a note and we'll get back to you from there.</p><a class="ct-email" href="mailto:septaneuron@gmail.com">septaneuron@gmail.com <span>↗</span></a>
+            <div class="ct-socials">
+                <a href="https://www.linkedin.com/in/septaneuron/" style="margin-right:10px;" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/septaneuron/" style="margin-right:10px;" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/septaneuron/" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            </div>
         </aside>
     </div>
 </section>
@@ -41,11 +70,11 @@
     <div class="ct-steps">
         <article class="ct-reveal"><b>01</b>
             <h3>We read it</h3>
-            <p>We review your idea, requirements, and goals.</p>
+            <p>We review your idea, requirements, and technical goals.</p>
         </article>
         <article class="ct-reveal"><b>02</b>
             <h3>We talk</h3>
-            <p>If there’s a good fit, we’ll get in touch to understand the project properly.</p>
+            <p>If there's a good fit, we'll get in touch to understand the project properly.</p>
         </article>
         <article class="ct-reveal"><b>03</b>
             <h3>We define the next step</h3>
