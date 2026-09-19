@@ -8,6 +8,7 @@
 <meta property="og:title" content="About Us | Septaneuron Software Studio & AI Development Team" />
 <meta property="og:description" content="Six builders. One studio. We build AI systems, web applications, and digital products for people with problems worth solving." />
 <meta property="og:type" content="website" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/about.css') }}">{% endblock %} {% block content %}
 <div class="ab-ambient" aria-hidden="true">
@@ -35,7 +36,7 @@
     </div>
     <div class="ab-seven ab-reveal">
         <div class="ab-seven__rings"></div><strong>6</strong><span>BUILDERS</span>
-        <div class="ab-seven__labels"><i>AI</i><i>WEB</i><i>AUTOMATION</i><i>DESIGN</i><i>PRODUCT</i></div>
+        <div class="ab-seven__labels"><i>AI</i><i>WEB</i><i>AUTOMATION</i><i>EDITING</i><i>MARKETING</i></div>
     </div>
 </section>
 
@@ -67,7 +68,14 @@
         </article>
         <article class="ab-what-card ab-reveal" data-card-number="03" data-hover-title="Senior people, close to the work">
             <span class="ab-bento-number">03</span>
-            <div class="ab-avatar-stack" aria-hidden="true"><i>AI</i><i>SE</i><i>CR</i><i>AU</i><i>VD</i></div>
+            <div class="ab-avatar-stack" aria-hidden="true">
+                <img src="{{ url_for('static', filename='assets/imgs/team/muhammad-souman.jpg') }}" alt="" loading="lazy">
+                <img src="{{ url_for('static', filename='assets/imgs/team/anas-waqas.jpeg') }}" alt="" loading="lazy">
+                <img src="{{ url_for('static', filename='assets/imgs/team/shaaf-khan.jpeg') }}" alt="" loading="lazy">
+                <img src="{{ url_for('static', filename='assets/imgs/team/alishba-nadeem.jpeg') }}" alt="" loading="lazy">
+                <img src="{{ url_for('static', filename='assets/imgs/team/ilsa-javed.jpeg') }}" alt="" loading="lazy">
+                <img src="{{ url_for('static', filename='assets/imgs/team/raja-amman-shakir.jpeg') }}" alt="" loading="lazy">
+            </div>
             <div class="ab-what-card__copy">
                 <h3>Experienced builders</h3>
                 <p>Work directly with senior engineers and technical creators from the initial kickoff straight through to production launch.</p>
@@ -141,7 +149,14 @@
         </article>
         <article class="ab-why-card ab-reveal">
             <div class="ab-why-card__visual ab-why-card__visual--team"><span>TEAM / 06</span><b>02</b>
-                <div><i>AI</i><i>SE</i><i>CR</i><i>AU</i></div>
+                <div>
+                    <img src="{{ url_for('static', filename='assets/imgs/team/muhammad-souman.jpg') }}" alt="Muhammad Souman" loading="lazy">
+                    <img src="{{ url_for('static', filename='assets/imgs/team/anas-waqas.jpeg') }}" alt="Anas Waqas" loading="lazy">
+                    <img src="{{ url_for('static', filename='assets/imgs/team/shaaf-khan.jpeg') }}" alt="Shaaf Khan" loading="lazy">
+                    <img src="{{ url_for('static', filename='assets/imgs/team/alishba-nadeem.jpeg') }}" alt="Alishba Nadeem" loading="lazy">
+                    <img src="{{ url_for('static', filename='assets/imgs/team/ilsa-javed.jpeg') }}" alt="Ilsa Javed" loading="lazy">
+                    <img src="{{ url_for('static', filename='assets/imgs/team/raja-amman-shakir.jpeg') }}" alt="Raja Amman Shakir" loading="lazy">
+                </div>
             </div>
             <h3>Senior-only team.</h3>
             <p>No rotating junior benches or staffing ladders standing between you and your product's outcome.</p>
@@ -174,40 +189,82 @@
     </div>
     <div class="ab-team">
         <article class="ab-person ab-reveal">
-            <div class="ab-person__portrait">MS</div><small>CEO &amp; CO-FOUNDER</small>
+            <div class="ab-person__portrait">
+                <img src="{{ url_for('static', filename='assets/imgs/team/muhammad-souman.jpg') }}" alt="Muhammad Souman" loading="lazy">
+            </div>
+            <small>CEO &amp; CO-FOUNDER</small>
             <h3>Muhammad Souman</h3>
             <p>Full-Stack &amp; AI Developer</p>
-            <div><a href="#contact">LinkedIn</a><a href="#contact">GitHub</a></div>
+            <div class="ab-person__links">
+                <a href="https://www.linkedin.com/in/muhammadsouman7/" target="_blank" rel="noopener" aria-label="Muhammad Souman on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/muhammadsouman7" target="_blank" rel="noopener" aria-label="Muhammad Souman on GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://somy.vercel.app" target="_blank" rel="noopener" aria-label="Muhammad Souman's portfolio"><i class="fa-solid fa-globe"></i></a>
+            </div>
         </article>
+
         <article class="ab-person ab-reveal">
-            <div class="ab-person__portrait">AW</div><small>CO-FOUNDER</small>
+            <div class="ab-person__portrait">
+                <img src="{{ url_for('static', filename='assets/imgs/team/anas-waqas.jpeg') }}" alt="Anas Waqas" loading="lazy">
+            </div>
+            <small>CO-FOUNDER</small>
             <h3>Anas Waqas</h3>
             <p>Machine Learning &amp; Computer Vision Engineer</p>
-            <div><a href="#contact">LinkedIn</a><a href="#contact">GitHub</a></div>
+            <div class="ab-person__links">
+                <a href="https://www.linkedin.com/in/anas-waqas-rajpout/" target="_blank" rel="noopener" aria-label="Anas Waqas on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/anas-rajpout07/" target="_blank" rel="noopener" aria-label="Anas Waqas on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
         </article>
+
         <article class="ab-person ab-reveal">
-            <div class="ab-person__portrait">SK</div><small>CO-FOUNDER</small>
+            <div class="ab-person__portrait">
+                <img src="{{ url_for('static', filename='assets/imgs/team/shaaf-khan.jpeg') }}" alt="Shaaf Khan" loading="lazy">
+            </div>
+            <small>CO-FOUNDER</small>
             <h3>Shaaf Khan</h3>
             <p>AI &amp; Automation Engineer</p>
-            <div><a href="#contact">LinkedIn</a><a href="#contact">GitHub</a></div>
+            <div class="ab-person__links">
+                <a href="https://www.linkedin.com/in/shaafkhan" target="_blank" rel="noopener" aria-label="Shaaf Khan on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/shaafkhan10k" target="_blank" rel="noopener" aria-label="Shaaf Khan on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
         </article>
+
         <article class="ab-person ab-reveal">
-            <div class="ab-person__portrait">AN</div><small>CO-FOUNDER</small>
+            <div class="ab-person__portrait">
+                <img src="{{ url_for('static', filename='assets/imgs/team/alishba-nadeem.jpeg') }}" alt="Alishba Nadeem" loading="lazy">
+            </div>
+            <small>CO-FOUNDER</small>
             <h3>Alishba Nadeem</h3>
             <p>Digital Marketing Specialist</p>
-            <div><a href="#contact">LinkedIn</a><a href="#contact">Portfolio</a></div>
+            <div class="ab-person__links">
+                <a href="https://www.linkedin.com/in/alishbaaaa-nadeem/" target="_blank" rel="noopener" aria-label="Alishba Nadeem on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/Alishba-Nadeem1" target="_blank" rel="noopener" aria-label="Alishba Nadeem on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
         </article>
+
         <article class="ab-person ab-reveal">
-            <div class="ab-person__portrait">IJ</div><small>CO-FOUNDER</small>
+            <div class="ab-person__portrait">
+                <img src="{{ url_for('static', filename='assets/imgs/team/ilsa-javed.jpeg') }}" alt="Ilsa Javed" loading="lazy">
+            </div>
+            <small>CO-FOUNDER</small>
             <h3>Ilsa Javed</h3>
             <p>Computer Vision Engineer</p>
-            <div><a href="#contact">LinkedIn</a><a href="#contact">GitHub</a></div>
+            <div class="ab-person__links">
+                <a href="https://www.linkedin.com/in/ilsajaved-ai/" target="_blank" rel="noopener" aria-label="Ilsa Javed on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/ilsa12" target="_blank" rel="noopener" aria-label="Ilsa Javed on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
         </article>
+
         <article class="ab-person ab-reveal">
-            <div class="ab-person__portrait">AM</div><small>CO-FOUNDER</small>
+            <div class="ab-person__portrait">
+                <img src="{{ url_for('static', filename='assets/imgs/team/raja-amman-shakir.jpeg') }}" alt="Raja Amman Shakir" loading="lazy">
+            </div>
+            <small>CO-FOUNDER</small>
             <h3>Raja Amman Shakir</h3>
             <p>Video Editor</p>
-            <div><a href="#contact">LinkedIn</a><a href="#contact">Portfolio</a></div>
+            <div class="ab-person__links">
+                <a href="https://www.linkedin.com/in/rajaamman/" target="_blank" rel="noopener" aria-label="Raja Amman Shakir on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/amanmani07" target="_blank" rel="noopener" aria-label="Raja Amman Shakir on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
         </article>
     </div>
 </section>

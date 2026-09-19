@@ -1,7 +1,8 @@
 <header class="sn-nav" id="snNav">
     <a class="sn-nav__brand" href="{{ url_for('home') }}">
         <!-- <img class="sn-nav__mark" src="{{ url_for('static', filename='assets/imgs/septaneuron.png') }}" alt="Septaneuron logo"> -->
-        <span class="sn-nav__name">Septaneuron</span>
+        <img class="sn-nav__logo" src="{{ url_for('static', filename='assets/imgs/logo/logo.svg') }}" alt="Septaneuron">
+        <!-- <span class="sn-nav__name">Septaneuron</span> -->
     </a>
     <div class="sn-dock">
         <a class="sn-dock__item {% if request.endpoint == 'home' %}is-active{% endif %}" data-target="home" aria-current="{% if request.endpoint == 'home' %}page{% endif %}" href="{{ url_for('home') }}"><span class="sn-dock__icon-slot"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/><path d="M9.5 20v-6h5v6"/></svg></span><span class="sn-dock__label">Home</span></a>

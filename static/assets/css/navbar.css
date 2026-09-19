@@ -108,6 +108,12 @@
     flex: 0 0 24px;
 }
 
+.sn-nav__logo {
+    display: block;
+    width: 140px;
+    height: auto
+}
+
 .sn-dock {
     display: flex;
     align-items: center;
@@ -266,6 +272,9 @@
     .sn-nav__toggle {
         display: inline-flex;
         margin-inline-start: auto;
+    }
+    .sn-nav__logo {
+        height: 24px
     }
     .sn-dock {
         order: 3;

@@ -98,27 +98,37 @@
         <div class="sn-section__heading sn-reveal">
             <div>
                 <p class="sn-kicker">Selected work</p>
-                <h2>A few things we’ve <em>shipped.</em></h2>
+                <h2>A few things we’ve <em>made.</em></h2>
             </div>
             <p class="sn-section__intro">A small studio is at its best when the work speaks for itself. Here are two representative builds from our portfolio.</p>
         </div>
         <div class="sn-work-grid">
             <article class="sn-work-card sn-work-card--feature sn-reveal sn-beam-card" data-beam-size="250">
-                <div class="sn-work-card__visual sn-visual--signal"><span class="sn-visual__label">AI OPERATIONS / 2025</span><span class="sn-visual__pulse"></span><span class="sn-visual__metric">−42%<small>time to resolution</small></span></div>
+                <a class="sn-work-card__visual sn-visual--image" href="{{ url_for('case_study_deepfake_detection') }}" aria-label="View XAI Forensics case study">
+                    <img src="{{ url_for('static', filename='assets/imgs/casestudyImgs/xai-gallery-img-01.png') }}" alt="XAI Forensics dashboard showing a deepfake verdict with a Grad-CAM heatmap" loading="lazy">
+                    <span class="sn-visual__label">EXPLAINABLE AI / 2025</span>
+                    <span class="sn-visual__metric">15<small>frames sampled per video</small></span>
+                </a>
                 <div class="sn-work-card__body">
-                    <p class="sn-card-meta">SignalDesk · AI operations platform</p>
-                    <h3>Turn a noisy support queue into a system that knows what to do next.</h3>
-                    <p>We combined retrieval, agent actions, and a human review layer into one working operations console.</p>
-                    <div class="sn-tags"><span>React</span><span>Python</span><span>LLM APIs</span></div>
+                    <p class="sn-card-meta">XAI Forensics · Deepfake video detection</p>
+                    <h3>A deepfake detector that shows its work, not just a "real or fake" label.</h3>
+                    <p>MTCNN face detection, a fine-tuned EfficientNet classifier, and Grad-CAM heatmaps, delivered through a Flask API and a React forensic dashboard.</p>
+                    <div class="sn-tags"><span>PyTorch</span><span>EfficientNet</span><span>Grad-CAM</span><span>Flask</span><span>React</span></div>
+                    <a class="sn-work-card__link" href="{{ url_for('case_study_deepfake_detection') }}">View case study <span>↗</span></a>
                 </div>
             </article>
+
             <article class="sn-work-card sn-reveal sn-beam-card" data-beam-size="250">
-                <div class="sn-work-card__visual sn-visual--atlas"><span class="sn-visual__label">INTERNAL TOOLS / 2024</span><span class="sn-visual__bars"><i></i><i></i><i></i><i></i></span><span class="sn-visual__caption">ONE SOURCE OF TRUTH</span></div>
+                <a class="sn-work-card__visual sn-visual--image" href="{{ url_for('case_study_kidney_stone_detection') }}" aria-label="View KidneyAI case study">
+                    <img src="{{ url_for('static', filename='assets/imgs/casestudyImgs/kidney-stone-gallery-img-01.png') }}" alt="KidneyAI dashboard detecting kidney stones in a CT scan" loading="lazy">
+                    <span class="sn-visual__label">MEDICAL AI / 2026</span>
+                </a>
                 <div class="sn-work-card__body">
-                    <p class="sn-card-meta">Atlas · Revenue operations</p>
-                    <h3>Give a growing team one clear view of the work moving through the business.</h3>
-                    <p>A focused dashboard replacing spreadsheets, manual handoffs, and a weekly reporting scramble.</p>
-                    <div class="sn-tags"><span>Next.js</span><span>Node</span><span>Postgres</span></div>
+                    <p class="sn-card-meta">KidneyAI · CT scan analysis</p>
+                    <h3>From CT upload to kidney stone detection and a PDF report in one workflow.</h3>
+                    <p>A custom-trained YOLO model with bounding-box overlays, SQLite scan history, and one-click PDF reports.</p>
+                    <div class="sn-tags"><span>YOLO</span><span>Flask</span><span>OpenCV</span><span>React</span><span>SQLite</span></div>
+                    <a class="sn-work-card__link" href="{{ url_for('case_study_kidney_stone_detection') }}">View case study <span>↗</span></a>
                 </div>
             </article>
         </div>
@@ -213,12 +223,13 @@
         </div>
         <div class="sn-testimonial-grid">
             <blockquote class="sn-quote sn-quote--primary sn-reveal"><span class="sn-quote__mark">“</span>
-                <p>They took a messy product idea, found the actual shape of it, and had a working version in our hands before a larger agency would have finished the kickoff.</p>
-                <footer><strong>Founder</strong><span>Early-stage product team</span></footer>
+                <p>Really happy with Septaneuron's service. My website looks clean, modern, and professional, and everything was built perfectly. The team handled everything smoothly and made the whole experience easy. Great work highly recommended!</p>
+                <footer><strong>Raja Shakir Liaquat</strong><span>Owner - Shakir Bridal Couture</span></footer>
             </blockquote>
             <blockquote class="sn-quote sn-reveal"><span class="sn-quote__mark">“</span>
-                <p>The difference was having senior engineers in the room every week. Decisions got made quickly, and nothing disappeared into a ticketing process.</p>
-                <footer><strong>Head of Operations</strong><span>Growth-stage company</span></footer>
+                <p>Septaneuron created a modern, professional, and user-friendly website that effectively presents my medical services, expertise, and professional profile. The team understood my requirements and delivered a clean, responsive website that
+                    makes it easier for patients to connect and learn about my practice.</p>
+                <footer><strong>Dr. Adil Aziz Khan</strong><span>Neurosurgeon</span></footer>
             </blockquote>
         </div>
     </section>
