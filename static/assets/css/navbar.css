@@ -591,3 +591,24 @@ body {
         transition: none;
     }
 }
+
+/* Center the hamburger/cross inside the circle */
+.sn-menu-icon {
+    margin-top: 0;
+}
+
+/* Circle shown on hover / focus / when the menu is open */
+.sn-nav__toggle {
+    margin-top: 10px; /* moves the whole circle down to line up with the logo */
+    transition: background-color 0.2s ease;
+}
+
+.sn-nav__toggle:hover,
+.sn-nav__toggle:focus-visible,
+.sn-nav.is-open .sn-nav__toggle {
+    background: rgba(242, 246, 247, 0.1);
+}
+
+.sn-nav__toggle:focus {
+    outline: none;
+}
