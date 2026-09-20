@@ -1,7 +1,7 @@
 {% extends "base.html" %} {# ============================================================ SEO VARIABLES ============================================================ #} {% set seo_title = project_title|default( 'KidneyAI: AI Kidney Stone Detection from
 CT Scans | Septaneuron', true ) %} {% set seo_description = project_meta_description|default( 'KidneyAI is a computer vision project by Septaneuron that uses a custom-trained YOLO model to detect kidney stones in CT scan images, store analysis history,
 and generate PDF reports.', true ) %} {% set seo_canonical = request.base_url %} {# Recommended OG image: static/assets/images/seo/kidneyai-og.jpg Ideally create a 1200x630 image for social sharing. #} {% set seo_image = project_og_image|default( url_for(
-'static', filename='assets/images/seo/kidneyai-og.jpg', _external=true ), true ) %} {% set seo_author = project_author|default('Septaneuron', true) %} {% set seo_github = github_url|default( 'https://github.com/AnasWaqas/KidneyAI', true ) %} {# ============================================================
+'static', filename='assets/images/seo/kidneyai-og.jpg', _external=true ), true ) %} {% set seo_author = project_author|default('Septaneuron', true) %} {% set seo_github = github_url|default( 'https://github.com/anas-rajpout07/Kidney-Stone-Detection', true ) %} {# ============================================================
 PAGE TITLE ============================================================ #} {% block title %} {{ seo_title }} {% endblock %} {# ============================================================ SEO / SOCIAL META TAGS / STRUCTURED DATA ============================================================
 #} {% block page_meta %}
 
