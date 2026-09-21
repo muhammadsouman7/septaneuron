@@ -76,6 +76,10 @@ def case_study_bake_bliss_hub():
 @app.route('/case-studies/al-wahab-traders')
 def case_study_al_wahad_traders():
     return render_template('case-studies/case_study-al-wahad-traders.html')
+
+@app.route('/case-studies/hr-recruitment-workflow')
+def case_study_hr_recruitment_workflow():
+    return render_template('case-studies/case_study-hr-recruitment-workflow.html')
 # End Case Studies
 
 if __name__ == '__main__':
