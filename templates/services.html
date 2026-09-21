@@ -7,6 +7,7 @@
 <meta property="og:title" content="Our Services | AI Development, Full-Stack & Digital Marketing | Septaneuron" />
 <meta property="og:description" content="Software that solves the problem, not just the brief. AI systems, web apps, automation, and digital growth services built by a senior team." />
 <meta property="og:type" content="website" />
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/page-hero.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/services.css') }}">{% endblock %} {% block content %}
 
 <div class="svc-ambient" aria-hidden="true">
@@ -14,8 +15,24 @@
     <div class="svc-orb svc-orb--b"></div>
     <div class="svc-grid"></div>
 </div>
+<section class="hero page-hero" id="top">
+    <div class="page-hero__aurora" aria-hidden="true">
+        <span class="page-hero__blob page-hero__blob--a"></span>
+        <span class="page-hero__blob page-hero__blob--b"></span>
+        <span class="page-hero__grid"></span>
+    </div>
+    <div class="page-hero__scrim"></div>
+    <div class="page-hero__content">
+        <div class="svc-kicker">What we build</div>
+        <h1>Software that solves the problem, <span>not just the brief.</span>
+        </h1>
+        <p>Septaneuron builds advanced AI systems, full-stack web applications, automated workflows, and digital growth infrastructure — for teams that need useful outcomes, not just deliverables.</p>
+        <div class="svc-hero__actions"><a class="svc-btn svc-btn--light" href="{{ url_for('contact') }}">Start a project <span>↗</span></a><a class="svc-btn svc-btn--glass" href="{{ url_for('portfolio') }}">See our work <span>↗</span></a></div>
+    </div>
+</section>
 
-<section class="hero svc-hero" id="home">
+
+<!-- <section class="hero svc-hero" id="home">
     <canvas id="threadCanvas" class="thread-canvas svc-thread-canvas"></canvas>
     <div class="svc-hero__scrim"></div>
     <div class="svc-hero__content">
@@ -24,7 +41,7 @@
         <p>Septaneuron builds advanced AI systems, full-stack web applications, automated workflows, and digital growth infrastructure — for teams that need useful outcomes, not just deliverables.</p>
         <div class="svc-hero__actions"><a class="svc-btn svc-btn--light" href="{{ url_for('contact') }}">Start a project <span>↗</span></a><a class="svc-btn svc-btn--glass" href="{{ url_for('portfolio') }}">See our work <span>↗</span></a></div>
     </div>
-</section>
+</section> -->
 
 <section class="svc-trust">
     <h2>From idea to production, <em>under one roof.</em></h2>
@@ -206,4 +223,5 @@
 </section>
 
 {% endblock %} {% block page_scripts %}
+<script src="{{ url_for('static', filename='assets/js/page-hero.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/services.js') }}"></script>{% endblock %}
