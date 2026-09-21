@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block title %}Portfolio | Septaneuron{% endblock %} {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/portfolio.css') }}">{% endblock %} {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/portfolio.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/page-hero.css') }}">{% endblock %} {% block content %}
 
 <div class="pf-ambient" aria-hidden="true">
     <div class="pf-ambient__grid"></div>
@@ -7,7 +8,23 @@
     <div class="pf-ambient__stream pf-ambient__stream--b"></div>
 </div>
 
-<section class="hero pf-hero" id="home"><canvas class="thread-canvas" id="threadCanvas"></canvas>
+<section class="hero page-hero" id="top">
+    <div class="page-hero__aurora" aria-hidden="true">
+        <span class="page-hero__blob page-hero__blob--a"></span>
+        <span class="page-hero__blob page-hero__blob--b"></span>
+        <span class="page-hero__grid"></span>
+    </div>
+    <div class="page-hero__scrim"></div>
+    <div class="page-hero__content">
+        <div class="svc-kicker">Selected Work</div>
+        <h1>Things we’ve <span>built.</span>
+        </h1>
+        <p>A collection of AI systems, web applications, internal tools, and experiments built by the Septaneuron team — from independent builds to live products.</p>
+        <div class="svc-hero__actions"><a class="pf-btn pf-btn--light" href="#featured">Explore our work <span>↓</span></a><a class="pf-btn pf-btn--glass" href="{{ url_for('contact') }}">Start a project <span>↗</span></a></div>
+    </div>
+</section>
+
+<!-- <section class="hero pf-hero" id="home"><canvas class="thread-canvas" id="threadCanvas"></canvas>
     <div class="hero-scrim"></div>
     <div class="hero-content">
         <div class="pf-hero__main"><span class="pf-kicker">Selected work</span>
@@ -16,7 +33,7 @@
             <div class="pf-actions"><a class="pf-btn pf-btn--light" href="#featured">Explore our work <span>↓</span></a><a class="pf-btn pf-btn--glass" href="{{ url_for('contact') }}">Start a project <span>↗</span></a></div>
         </div>
     </div>
-</section>
+</section> -->
 <section class="pf-proof">
     <p>Built across AI, software engineering &amp; product development</p>
     <div><span>AI / ML</span><span>Computer Vision</span><span>Web Applications</span><span>Automation</span><span>Backend Systems</span></div>
@@ -94,11 +111,11 @@
             <h3>Bake Bliss Hub</h3>
             <p>MetaAds . Facebook . Instagram . WhatsApp Campaign</p><a href="{{ url_for('case_study_bake_bliss_hub') }}">View Case Study ↗</a></article>
 
-        <article class="pf-mini-card pf-reveal" data-category="ai automation"><span class="pf-card-index">05</span><span class="pf-card-type">AI / COMPUTER VISION</span>
+        <article class="pf-mini-card pf-reveal" data-category="ai"><span class="pf-card-index">05</span><span class="pf-card-type">AI / COMPUTER VISION</span>
             <h3>Cartoon Face and Emotion Detection</h3>
             <p>YOLOv8 . Flask . PyTorch</p><a href="{{ url_for('case_study_cartoon_face_emotion_detection') }}" style="margin-right:10px;">View Case Study ↗</a><a href="https://github.com/muhammadsouman7/Cartoon-Face-And-Emotion-Detection">GitHub ↗</a></article>
 
-        <article class="pf-mini-card pf-reveal" data-category="ai automation"><span class="pf-card-index">06</span><span class="pf-card-type">WEB DEVELOPMENT</span>
+        <article class="pf-mini-card pf-reveal" data-category="ai"><span class="pf-card-index">06</span><span class="pf-card-type">WEB DEVELOPMENT</span>
             <h3>Shakir Bridal Couture</h3>
             <p>Wordpress . Woocommerce . PHP</p><a href="https://shakirbridalcouture.com/">Visit ↗</a></article>
 
@@ -109,6 +126,10 @@
         <article class="pf-mini-card pf-reveal" data-category="marketing"><span class="pf-card-index">08</span><span class="pf-card-type">DIGITAL MARKETING</span>
             <h3>Al-Wahad Traders</h3>
             <p>MetaAds . Facebook . Instagram</p><a href="{{ url_for('case_study_al_wahad_traders') }}">View Case Study ↗</a></article>
+
+        <article class="pf-mini-card pf-reveal" data-category="automation"><span class="pf-card-index">09</span><span class="pf-card-type">Automation</span>
+            <h3>HR Recruitment Workflow</h3>
+            <p>n8n workflow . Automation . Google Sheets</p><a href="{{ url_for('case_study_hr_recruitment_workflow') }}" style="margin-right:10px;">View Case Study ↗</a><a href="https://github.com/shaafkhan10k/N8n_scenario/tree/main/HR">GitHub ↗</a></article>
     </div>
 </section>
 <section class="pf-section pf-live">
@@ -188,4 +209,5 @@
 </section>
 
 {% endblock %} {% block page_scripts %}
-<script src="{{ url_for('static', filename='assets/js/portfolio.js') }}"></script>{% endblock %}
+<script src="{{ url_for('static', filename='assets/js/portfolio.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/page-hero.js') }}"></script>{% endblock %}
