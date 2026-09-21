@@ -68,12 +68,11 @@
             </div>
             <div><span class="svc-detail__label">PRODUCT</span>
                 <p>Scalable SaaS applications<br>Startup MVPs<br>SecureCustomer Portals</p>
-            </div><a class="svc-arrow-link" href="#contact">Build a web product <span>→</span></a></div>
+            </div><a class="svc-arrow-link" href="{{ url_for('contact') }}">Build a web product <span>→</span></a></div>
         <div class="svc-visual svc-product-visual">
             <div class="svc-product-visual__bar"><i></i><i></i><i></i></div>
             <div class="svc-product-visual__chart"><b></b><b></b><b></b><b></b><b></b></div>
-            <div class="svc-product-visual__line"></div><span>PRODUCT / 07</span></div>
-    </div>
+        </div>
 </section>
 
 <!-- 03 Automation & Internal Tools (merged) -->
@@ -91,7 +90,7 @@
         <div class="svc-flow__node"><strong>04</strong><span>Result</span><small>People progress faster with fewer bottlenecks.</small></div>
     </div>
     <div class="svc-bottom-row">
-        <div class="svc-pill-grid svc-pill-grid--wide"><span>Process automation</span><span>API integrations</span><span>Webhooks</span><span>Admin panels</span><span>Business dashboards</span><span>Reporting tools</span></div><a class="svc-arrow-link" href="#contact">Automate a workflow <span>→</span></a></div>
+        <div class="svc-pill-grid svc-pill-grid--wide"><span>Process automation</span><span>API integrations</span><span>Webhooks</span><span>Admin panels</span><span>Business dashboards</span><span>Reporting tools</span></div><a class="svc-arrow-link" href="{{ url_for('contact') }}">Automate a workflow <span>→</span></a></div>
 </section>
 
 <!-- 04 Digital Growth & Content -->
@@ -171,14 +170,14 @@
         </article>
     </div>
 
-    <a class="svc-arrow-link" href="#contact">
+    <a class="svc-arrow-link" href="{{ url_for('contact') }}">
         Grow your reach <span>→</span>
     </a>
 </section>
 
 
 <!-- PRICING (evaluate — keep or drop) -->
-<section class="svc-section svc-engagement" id="pricing">
+<!-- <section class="svc-section svc-engagement" id="pricing">
     <div class="svc-section__head">
         <div><span class="svc-index">PRICING</span>
             <h2>What a project <em>typically costs.</em></h2>
@@ -196,7 +195,7 @@
             <h3>Ongoing / Retainer</h3>
             <p>Continued build-out, support, and iteration after launch.</p><span>Custom — talk to us</span></article>
     </div>
-</section>
+</section> -->
 
 <!-- FINAL CTA -->
 <section class="svc-final" id="contact">
