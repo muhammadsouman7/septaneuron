@@ -5,6 +5,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'change-this-development-secret')
 
+# Normal pages routes
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -23,22 +24,6 @@ def contact():
 @app.route('/portfolio')
 def portfolio():
     return render_template('portfolio.html')
-
-@app.route('/case-studies/xai-powered-deepfake-detection')
-def case_study_deepfake_detection():
-    return render_template('case-studies/case_study-xai-powered-deepfake-detection.html')
-
-@app.route('/case-studies/cartoon-face-emotion-detection')
-def case_study_cartoon_face_emotion_detection():
-    return render_template('case-studies/case_study-cartoon-face-and-emotion-detection.html')
-
-@app.route('/case-studies/kidney-stone-detection')
-def case_study_kidney_stone_detection():
-    return render_template('case-studies/case_study-kidney-stone-detection.html')
-
-@app.route('/case-studies/face-recognition-attendance-system')
-def case_study_face_recognition_attendance_system():
-    return render_template('case-studies/case_study-face-recognition-attendance-system.html')
 
 @app.route('/services')
 def services():
@@ -60,10 +45,38 @@ def fullstack_projects():
 def terms_and_conditions():
     return render_template('terms-and-conditions.html')
 
-
 @app.route('/privacy-policy')
 def privacy_policy():
     return render_template('privacy-policy.html')
+
+# End Normal Pages Routes
+
+#Start Case Studies Pages
+
+@app.route('/case-studies/xai-powered-deepfake-detection')
+def case_study_deepfake_detection():
+    return render_template('case-studies/case_study-xai-powered-deepfake-detection.html')
+
+@app.route('/case-studies/cartoon-face-emotion-detection')
+def case_study_cartoon_face_emotion_detection():
+    return render_template('case-studies/case_study-cartoon-face-and-emotion-detection.html')
+
+@app.route('/case-studies/kidney-stone-detection')
+def case_study_kidney_stone_detection():
+    return render_template('case-studies/case_study-kidney-stone-detection.html')
+
+@app.route('/case-studies/face-recognition-attendance-system')
+def case_study_face_recognition_attendance_system():
+    return render_template('case-studies/case_study-face-recognition-attendance-system.html')
+
+@app.route('/case-studies/bake-bliss-hub')
+def case_study_bake_bliss_hub():
+    return render_template('case-studies/case_study-bake-bliss-hub.html')
+
+@app.route('/case-studies/al-wahab-traders')
+def case_study_al_wahad_traders():
+    return render_template('case-studies/case_study-al-wahad-traders.html')
+# End Case Studies
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
