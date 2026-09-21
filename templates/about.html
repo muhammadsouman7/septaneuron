@@ -10,13 +10,31 @@
 <meta property="og:type" content="website" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/page-hero.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/about.css') }}">{% endblock %} {% block content %}
 <div class="ab-ambient" aria-hidden="true">
     <div class="ab-grid"></div>
     <div class="ab-orb ab-orb--a"></div>
     <div class="ab-orb ab-orb--b"></div>
 </div>
-<section class="hero ab-hero" id="home"><canvas class="thread-canvas" id="threadCanvas"></canvas>
+
+<section class="hero page-hero" id="top">
+    <div class="page-hero__aurora" aria-hidden="true">
+        <span class="page-hero__blob page-hero__blob--a"></span>
+        <span class="page-hero__blob page-hero__blob--b"></span>
+        <span class="page-hero__grid"></span>
+    </div>
+    <div class="page-hero__scrim"></div>
+    <div class="page-hero__content">
+        <div class="svc-kicker">About Septaneuron</div>
+        <h1>Six builders. <span>One studio.</span>
+        </h1>
+        <p>Septaneuron is a premier software studio building advanced AI systems, full-stack web applications, automation architectures, and digital products for people with problems worth solving.</p><small>Small by design. Technical by nature. Accountable from idea to deployment.</small>
+        <div class="svc-hero__actions"><a class="ab-btn ab-btn--light" href="#team">Meet the team <span>↓</span></a><a class="ab-btn ab-btn--glass" href="{{ url_for('contact') }}">Start a project <span>↗</span></a></div>
+    </div>
+</section>
+
+<!-- <section class="hero ab-hero" id="home"><canvas class="thread-canvas" id="threadCanvas"></canvas>
     <div class="hero-scrim"></div>
     <div class="hero-content">
         <div class="ab-hero__main"><span class="ab-kicker">About Septaneuron</span>
@@ -25,7 +43,7 @@
             <div class="ab-actions"><a class="ab-btn ab-btn--light" href="#team">Meet the team <span>↓</span></a><a class="ab-btn ab-btn--glass" href="{{ url_for('contact') }}">Start a project <span>↗</span></a></div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="ab-section ab-who" id="who">
     <div class="ab-copy ab-reveal"><span class="ab-kicker">Who we are</span>
@@ -321,4 +339,5 @@
     <div><a class="ab-btn ab-btn--light" href="{{ url_for('contact') }}">Start a project <span>↗</span></a><a class="ab-btn ab-btn--glass" href="#team">Meet the team <span>↑</span></a></div>
 </section>
 {% endblock %} {% block page_scripts %}
+<script src="{{ url_for('static', filename='assets/js/page-hero.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/about.js') }}"></script>{% endblock %}
